@@ -1,0 +1,104 @@
+@media (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+}
+.menu-toggle {
+  min-height: 19px;
+  min-width: 19px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  position: absolute;
+  fill: $secondary-text;
+  top: 21px;
+  right: 25px;
+
+  &:focus,
+  &:hover {
+    fill: $hover-text;
+  }
+}
+.mobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  padding: 48px 40px;
+  background-color: $primary-color;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 302px;
+
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+  &.is-open {
+    transform: translateX(0);
+  }
+  &__menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+
+    &-link {
+      color: $secondary-text;
+      text-decoration: none;
+      font-weight: $font-medium;
+      font-size: $font-link-mobile-menu;
+
+      &:hover,
+      &:focus {
+        color: $hover-text;
+      }
+    }
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    &-phone {
+      font-size: 34px;
+      font-weight: $font-medium;
+      color: $hover-text;
+    }
+    &-email {
+      font-size: 24px;
+      font-weight: $font-medium;
+      color: $primary-text;
+    }
+  }
+  &__socials {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    &-link {
+      font-size: $font-card-header;
+      color: $hover-text;
+      font-weight: $font-medium;
+    }
+  }
+  &__exit {
+    width: 19px;
+    height: 19px;
+  }
+}

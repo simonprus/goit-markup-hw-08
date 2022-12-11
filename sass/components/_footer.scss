@@ -1,0 +1,344 @@
+footer {
+  background-color: $background-footer;
+  width: 100%;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 60px;
+  padding: 60px 0;
+
+  &__container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  &__logo {
+    font-family: $logo-font;
+    font-size: $font-logo;
+    font-weight: $font-bold;
+    color: $primary-color;
+    line-height: 1.193;
+
+    &-color {
+      color: $hover-text;
+    }
+  }
+
+  &__address {
+    font-style: normal;
+    color: $primary-color;
+    margin: 20px 0 0 0;
+    text-align: center;
+  }
+
+  &__links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin: 9px 0;
+  }
+
+  &__link {
+    color: $footer-link;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover {
+      color: $hover-text;
+    }
+  }
+
+  &__header {
+    font-weight: $font-bold;
+    font-size: $font-standard;
+    color: $primary-color;
+    text-transform: uppercase;
+    margin: 0 0 20px 0px;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    background-color: $footer-icon;
+    border-radius: 50%;
+    fill: $primary-color;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    :focus {
+      @include hover-icon;
+    }
+  }
+
+  &__sign-up {
+    background-color: rgba(0, 0, 0, 0);
+    border: solid rgba(255, 255, 255, 0.3) 1px;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 16px;
+    font-size: 16px;
+  }
+
+  &__button {
+    margin: 0;
+    background-color: $hover-text;
+    color: $primary-color;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    font-size: $font-enlarged;
+    font-weight: $font-bold;
+    border-radius: 4px;
+    border-style: none;
+    margin-left: 12px;
+    text-align: left;
+    padding-left: 42px;
+    cursor: pointer;
+  }
+
+  &__button-icon {
+    fill: $primary-color;
+    position: absolute;
+    width: 50px;
+    height: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 60px 0;
+
+    &__container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    &__logo {
+      font-family: $logo-font;
+      font-size: $font-logo;
+      font-weight: $font-bold;
+      color: $primary-color;
+      line-height: 1.193;
+
+      &-color {
+        color: $hover-text;
+      }
+    }
+
+    &__address {
+      font-style: normal;
+      color: $primary-color;
+      margin: 20px 0 0 0;
+      text-align: center;
+    }
+
+    &__links {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      margin: 9px 0;
+    }
+
+    &__link {
+      color: $footer-link;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover {
+        color: $hover-text;
+      }
+    }
+
+    &__header {
+      font-weight: $font-bold;
+      font-size: $font-standard;
+      color: $primary-color;
+      text-transform: uppercase;
+      margin: 0 0 20px 0px;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 10px;
+    }
+
+    &__icon {
+      width: 44px;
+      height: 44px;
+      background-color: $footer-icon;
+      border-radius: 50%;
+      fill: $primary-color;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      :focus {
+        @include hover-icon;
+      }
+    }
+
+    &__sign-up {
+      background-color: rgba(0, 0, 0, 0);
+      border: solid rgba(255, 255, 255, 0.3) 1px;
+      border-radius: 4px;
+      width: 100%;
+      height: 50px;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 16px;
+      font-size: 16px;
+    }
+
+    &__button {
+      margin: 20px 0 0 0;
+      background-color: $hover-text;
+      color: $primary-color;
+      width: 200px;
+      height: 50px;
+      align-items: center;
+      font-size: $font-enlarged;
+      font-weight: $font-bold;
+      border-radius: 4px;
+      border-style: none;
+      margin-left: 12px;
+      text-align: left;
+      padding-left: 42px;
+      cursor: pointer;
+    }
+
+    &__button-icon {
+      fill: $primary-color;
+      position: absolute;
+      width: 50px;
+      height: 24px;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  footer {
+    background-color: $background-footer;
+  }
+  .footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 70px;
+
+    &__container {
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: start;
+      text-align: left;
+    }
+
+    &__logo {
+      font-family: $logo-font;
+      font-size: $font-logo;
+      font-weight: $font-bold;
+      color: $primary-color;
+      line-height: 1.193;
+
+      &-color {
+        color: $hover-text;
+      }
+    }
+
+    &__address {
+      font-style: normal;
+      color: $primary-color;
+      margin: 20px 0 0 0;
+    }
+
+    &__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      text-align: left;
+      gap: 9px;
+      margin: 9px 0;
+    }
+
+    &__link {
+      color: $footer-link;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+      &:hover {
+        color: $hover-text;
+      }
+    }
+
+    &__header {
+      font-weight: $font-bold;
+      font-size: $font-standard;
+      color: $primary-color;
+      text-transform: uppercase;
+      margin: 20px 0 20px 0px;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    &__icon {
+      width: 44px;
+      height: 44px;
+      background-color: $footer-icon;
+      border-radius: 50%;
+      fill: $primary-color;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      :focus {
+        @include hover-icon;
+      }
+    }
+
+    &__sign-up {
+      background-color: rgba(0, 0, 0, 0);
+      border: solid rgba(255, 255, 255, 0.3) 1px;
+      border-radius: 4px;
+      width: 358px;
+      height: 50px;
+      color: rgba(255, 255, 255, 0.6);
+      padding: 16px;
+      font-size: 16px;
+    }
+
+    &__button {
+      background-color: $hover-text;
+      color: $primary-color;
+      width: 200px;
+      height: 50px;
+      align-items: center;
+      font-size: $font-enlarged;
+      font-weight: $font-bold;
+      border-radius: 4px;
+      border-style: none;
+      margin-left: 12px;
+      text-align: left;
+      padding-left: 42px;
+      cursor: pointer;
+    }
+
+    &__button-icon {
+      fill: $primary-color;
+      position: absolute;
+      width: 50px;
+      height: 24px;
+    }
+  }
+}

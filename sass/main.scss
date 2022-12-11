@@ -1,0 +1,39 @@
+@import "./utils/colors";
+@import "./utils/resets";
+@import "./utils/fonts";
+@import "./utils/mixins";
+
+@import "./components/header";
+@import "./components/indexMain";
+@import "./components/footer";
+@import "./components/modal";
+@import "./components/portfolioMain";
+@import "./components/mobileMenu";
+body {
+  background-color: $primary-color;
+  color: $primary-text;
+  font-size: $font-standard;
+  letter-spacing: map-get($letter-spacing, standard);
+}
+.container {
+  width: 100%;
+
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1200px;
+
+    margin: 0 auto;
+  }
+}
+a:focus-within {
+  color: $hover-text;
+  fill: $hover-text;
+}

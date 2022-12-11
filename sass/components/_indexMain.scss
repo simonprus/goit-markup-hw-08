@@ -1,0 +1,507 @@
+.block {
+  @include flexCenter(column);
+  padding: 60px 0;
+  gap: 50px;
+
+  &__header {
+    font-size: $font-section-header;
+    color: $secondary-text;
+  }
+
+  &__background {
+    background-color: $background-card;
+  }
+}
+.top-section {
+  background-image: url(../../images/background.jpg);
+  background-color: $background-mix;
+  background-blend-mode: difference;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+
+  &__container {
+    @include flexCenter(column);
+    padding: 118px 0;
+    gap: 30px;
+  }
+
+  &__header {
+    font-size: $font-logo;
+    color: $primary-color;
+    letter-spacing: map-get($letter-spacing, header);
+    font-weight: $font-extrabold;
+    text-align: center;
+    line-height: 1.364;
+  }
+
+  &__button {
+    background-color: $hover-text;
+    border-radius: 4px;
+    color: $primary-color;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    font-family: $standard-font;
+    font-size: $font-enlarged;
+    font-weight: $font-bold;
+    letter-spacing: map-get($letter-spacing, header);
+  }
+}
+.our-speciality {
+  @include flexCenter(column);
+  gap: 30px;
+  padding: 60px 15px 60px 15px;
+  justify-content: center;
+  width: 100%;
+
+  & > li {
+    width: 100%;
+  }
+
+  &__icon {
+    @include flexCenter(row);
+    border-radius: 4px;
+    margin-bottom: 30px;
+    height: 120px;
+    width: 100%;
+
+    background-color: $background-card;
+  }
+
+  &__header {
+    font-weight: $font-bold;
+    color: $secondary-text;
+    font-size: $font-standard;
+    margin: 0 0 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  &__text {
+    line-height: 1.71;
+  }
+}
+.mobile-hidden {
+  display: none;
+}
+.our-team {
+  @include flexCenter(column);
+  gap: 30px;
+  padding: 0 15px;
+
+  &__card {
+    @include flexCenter(column);
+    text-align: center;
+    background-color: $primary-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+  &__name {
+    margin: 30px 0 10px 0;
+    line-height: 1.1875;
+    font-size: $font-enlarged;
+    font-weight: $font-medium;
+    color: $secondary-text;
+  }
+
+  &__profession {
+    line-height: 1.1875;
+    font-size: $font-enlarged;
+    margin: 0 0 16px 0;
+  }
+
+  &__icons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+
+  &__icon {
+    width: 44px;
+    height: 44px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    fill: $icon-background;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    :focus {
+      @include hover-icon;
+    }
+  }
+}
+.our-clients {
+  @include flexCenter(row);
+  flex-wrap: wrap;
+  gap: 30px;
+  &__logo {
+    border-radius: 4px;
+    border: $icon-background solid 1px;
+    width: 210px;
+    height: 92px;
+    fill: $icon-background;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    :focus {
+      fill: $hover-text;
+      border: $hover-text solid 1px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .block {
+    @include flexCenter(column);
+    padding: 94px 0;
+    gap: 50px;
+
+    &__header {
+      font-size: $font-section-header;
+      color: $secondary-text;
+    }
+
+    &__background {
+      background-color: $background-card;
+    }
+  }
+  .top-section {
+    background-image: url(../../images/background.jpg);
+    background-color: $background-mix;
+    background-blend-mode: difference;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+
+    &__container {
+      @include flexCenter(column);
+      padding: 200px 0;
+      gap: 30px;
+      width: 100%;
+    }
+
+    &__header {
+      font-size: $font-main-text;
+      color: $primary-color;
+      letter-spacing: map-get($letter-spacing, header);
+      font-weight: $font-extrabold;
+      text-align: center;
+      line-height: 1.364;
+    }
+
+    &__button {
+      background-color: $hover-text;
+      border-radius: 4px;
+      color: $primary-color;
+      width: 200px;
+      height: 50px;
+      cursor: pointer;
+      border: none;
+      font-family: $standard-font;
+      font-size: $font-enlarged;
+      font-weight: $font-bold;
+      letter-spacing: map-get($letter-spacing, header);
+    }
+  }
+  .our-speciality {
+    @include flexCenter(row);
+    gap: 30px;
+    padding: 94px 0 0 0;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    &__icon {
+      @include flexCenter(row);
+      border-radius: 4px;
+      margin-bottom: 30px;
+      height: 120px;
+      width: 354px;
+      background-color: $background-card;
+    }
+    & > li {
+      flex-basis: calc((100% - 120px) / 4);
+    }
+
+    &__header {
+      font-weight: $font-bold;
+      color: $secondary-text;
+      font-size: $font-standard;
+      margin: 0 0 10px 0;
+    }
+
+    &__text {
+      line-height: 1.71;
+    }
+  }
+  .our-services {
+    @include flexCenter(row);
+    gap: 30px;
+
+    &__description {
+      color: $primary-color;
+      font-weight: $font-bold;
+      background-color: #2f303acc;
+      height: 70px;
+      text-align: center;
+      position: relative;
+      text-transform: uppercase;
+      padding: 27px 0;
+      top: -72px;
+    }
+    &-card-size {
+      height: 294px;
+      width: 370px;
+    }
+  }
+  .our-team {
+    @include flexCenter(row);
+    gap: 30px;
+    flex-wrap: wrap;
+
+    &__card {
+      @include flexCenter(column);
+      text-align: center;
+      background-color: $primary-color;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+      width: 354px;
+      &-picture {
+        max-width: 960px;
+        min-width: 320px;
+      }
+    }
+    &__name {
+      margin: 30px 0 10px 0;
+      line-height: 1.1875;
+      font-size: $font-enlarged;
+      font-weight: $font-medium;
+      color: $secondary-text;
+    }
+
+    &__profession {
+      line-height: 1.1875;
+      font-size: $font-enlarged;
+      margin: 0 0 16px 0;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    &__icon {
+      width: 44px;
+      height: 44px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      fill: $icon-background;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      :focus {
+        @include hover-icon;
+      }
+    }
+  }
+  .our-clients {
+    @include flexCenter(row);
+    gap: 30px;
+
+    &__logo {
+      border-radius: 4px;
+      border: $icon-background solid 1px;
+      width: 226px;
+      height: 92px;
+      fill: $icon-background;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      :focus {
+        fill: $hover-text;
+        border: $hover-text solid 1px;
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .block {
+    @include flexCenter(column);
+    padding: 94px 0;
+    gap: 50px;
+
+    &__header {
+      font-size: $font-section-header;
+      color: $secondary-text;
+    }
+
+    &__background {
+      background-color: $background-card;
+    }
+  }
+  .mobile-hidden {
+    display: flex;
+  }
+  .top-section {
+    background-image: url(../../images/background.jpg);
+    background-color: $background-mix;
+    background-blend-mode: difference;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    width: 100%;
+
+    &__container {
+      @include flexCenter(column);
+      padding: 200px 0;
+      gap: 30px;
+    }
+
+    &__header {
+      font-size: $font-main-text;
+      color: $primary-color;
+      letter-spacing: map-get($letter-spacing, header);
+      font-weight: $font-extrabold;
+      text-align: center;
+      line-height: 1.364;
+    }
+
+    &__button {
+      background-color: $hover-text;
+      border-radius: 4px;
+      color: $primary-color;
+      width: 200px;
+      height: 50px;
+      cursor: pointer;
+      border: none;
+      font-family: $standard-font;
+      font-size: $font-enlarged;
+      font-weight: $font-bold;
+      letter-spacing: map-get($letter-spacing, header);
+    }
+  }
+  .our-speciality {
+    @include flexCenter(row);
+    gap: 30px;
+    padding: 94px 0 0 0;
+    justify-content: center;
+
+    &__icon {
+      @include flexCenter(row);
+      border-radius: 4px;
+      margin-bottom: 30px;
+      height: 120px;
+      width: 270px;
+      background-color: $background-card;
+    }
+    & > li {
+      flex-basis: calc((100% - 120px) / 4);
+    }
+
+    &__header {
+      font-weight: $font-bold;
+      color: $secondary-text;
+      font-size: $font-standard;
+      margin: 0 0 10px 0;
+    }
+
+    &__text {
+      line-height: 1.71;
+    }
+  }
+  .our-services {
+    @include flexCenter(row);
+    gap: 30px;
+
+    &__description {
+      color: $primary-color;
+      font-weight: $font-bold;
+      background-color: #2f303acc;
+      height: 70px;
+      text-align: center;
+      position: relative;
+      text-transform: uppercase;
+      padding: 27px 0;
+      top: -72px;
+    }
+    &-card-size {
+      height: 294px;
+      width: 370px;
+    }
+  }
+  .our-team {
+    @include flexCenter(row);
+    gap: 30px;
+
+    &__card {
+      @include flexCenter(column);
+      text-align: center;
+      background-color: $primary-color;
+      box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
+      width: 270px;
+      &-picture {
+        max-width: 960px;
+        min-width: 320px;
+      }
+    }
+    &__name {
+      margin: 30px 0 10px 0;
+      line-height: 1.1875;
+      font-size: $font-enlarged;
+      font-weight: $font-medium;
+      color: $secondary-text;
+    }
+
+    &__profession {
+      line-height: 1.1875;
+      font-size: $font-enlarged;
+      margin: 0 0 16px 0;
+    }
+
+    &__icons {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    &__icon {
+      width: 44px;
+      height: 44px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      fill: $icon-background;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      :focus {
+        @include hover-icon;
+      }
+    }
+  }
+  .our-clients {
+    @include flexCenter(row);
+    gap: 30px;
+
+    &__logo {
+      border-radius: 4px;
+      border: $icon-background solid 1px;
+      width: 170px;
+      height: 92px;
+      fill: $icon-background;
+      transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+      &:hover,
+      :focus {
+        fill: $hover-text;
+        border: $hover-text solid 1px;
+      }
+    }
+  }
+}

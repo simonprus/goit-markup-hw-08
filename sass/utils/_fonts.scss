@@ -1,0 +1,29 @@
+// Font weight
+
+$font-regular: 400;
+$font-medium: 500; 
+$font-bold: 700;
+$font-extrabold: 900;
+
+// Font size 
+
+$font-standard: 14px;
+$font-enlarged: 16px;
+$font-card-header: 18px;
+$font-logo: 26px;
+$font-section-header: 36px;
+$font-link-mobile-menu: 40px;
+$font-main-text: 44px;
+
+// Letter Spacing
+
+$letter-spacing: (
+  "standard": 0.03em,
+  "header": 0.06em,
+  "links": 0.02em,
+);
+
+// Font family
+
+$standard-font: "Roboto", sans-serif;
+$logo-font: "Raleway", sans-serif;
